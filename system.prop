@@ -1,0 +1,63 @@
+#-------------------------------------------------
+# 一加Ace6 性能微调（不动CPU调度，仅增强响应）
+#-------------------------------------------------
+
+# 总体调试模式
+debug.performance.tuning=1
+
+# 硬件加速
+video.accelerate.hw=1
+persist.sys.ui.hw=1
+
+# 渲染合成模式设为GPU
+debug.composition.type=gpu
+persist.sys.composition.type=gpu
+
+# 滚动缓存优化
+persist.sys.scrollingcache=4
+
+# 减少日志写入
+ro.logd.kernel=false
+persist.logd.size=256
+
+# 快速开机
+ro.config.hw_quickpoweron=true
+
+# 后台限制辅助（与service.sh配合）
+ro.sys.fw.bg_apps_limit=64
+persist.sys.fw.bg_apps_limit=64
+
+# 更强渲染优先级（前台UI优先）
+debug.sf.enable_gl_backpressure=1
+debug.sf.latch_unsignaled=1
+
+# 更强GPU渲染/减少CPU绘制
+debug.hwui.renderer=skiavk
+debug.hwui.use_vulkan=1
+
+# 触控/输入更灵敏（减少延迟）
+persist.view.touch.responsive=1
+persist.view.scroll.responsive=1
+
+# IO/内存更激进
+persist.sys.purgeable_assets=1
+ro.kernel.android.checkjni=0
+dalvik.vm.checkjni=false
+
+# 动画更快（不影响流畅，只提响应）
+persist.sys.anim.scale=0.7
+persist.sys.anim.trans.scale=0.7
+persist.sys.anim.dur.scale=0.7
+
+# 内存后台更紧（保活前台）
+persist.sys.fw.bg_priority_limit=2
+persist.sys.fw.bg_non_visible_limit=4
+
+# 全局锁定触控330Hz 兜底加固
+persist.vendor.touch.sampling_rate=330
+persist.vendor.touch.game.sampling_rate=330
+persist.vendor.touch.report_rate=330
+ro.vendor.touch.max_rate=330
+persist.vendor.touch.latency.mode=1
+persist.vendor.touch.response.level=2
+debug.touch.fling=1
