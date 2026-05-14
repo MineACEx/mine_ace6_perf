@@ -45,4 +45,4 @@ This module is made by a personal enthusiast. The author is not responsible for 
 ---
 
 ## 📜 License
-MIT License
+This project is licensed under the [MIT License](../LICENSE).
