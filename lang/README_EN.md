@@ -26,7 +26,7 @@ All links are synced automatically, so you only need to update `index.html` once
 
 - ✅ **Primary (Recommended for China)**：[ace6perf.netlify.app](https://ace6perf.netlify.app)
 - 📌 **Alternative 1**：[mine-ace6-perf.vercel.app](https://mine-ace6-perf.vercel.app)
-- 📌 **Alternative 2**：[mineaceex.github.io/mine_ace6_perf](https://mineaceex.github.io/mine_ace6_perf/)
+- 📌 **Alternative 2**：[mineaceex.github.io/mine_ace6_perf](https://mineacex.github.io/mine_ace6_perf/)
 
 ### 📥 Download Options
 - [GitHub Release](https://github.com/MineACEx/mine_ace6_perf/releases)
