@@ -24,9 +24,9 @@
 ### 🌐 官方网站
 | 访问地址(手机用户可右滑) | 推荐指数 | 备注 |
 |----------|----------|------|
-| [ace6perf.netlify.app](https://ace6perf.netlify.app) | ⭐⭐⭐⭐⭐ | 国内秒开，首选入口 |
-| [mine-ace6-perf.vercel.app](https://mine-ace6-perf.vercel.app) | ⭐⭐⭐⭐ | 网络环境良好时使用 |
-| [mineaceex.github.io/mine_ace6_perf](https://mineaceex.github.io/mine_ace6_perf/) | ⭐⭐⭐ | 兜底备用地址 |
+| [Netlify.app](https://ace6perf.netlify.app) | ⭐⭐⭐⭐⭐ | 国内秒开，首选入口 |
+| [Github.com](https://mine-ace6-perf.vercel.app) | ⭐⭐⭐⭐ | 网络环境良好时使用 |
+| [Vercel.app](https://mine-ace6-perf.vercel.app) | ⭐⭐⭐ | 兜底备用地址 |
 
 
 ### 📥 下载方式
