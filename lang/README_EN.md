@@ -21,6 +21,13 @@ This is a performance and experience optimization module made exclusively for th
 - **Low Latency Mode**
   Optimizes touch response and fling inertia for more fluid daily operations and smoother animations.
 
+## 🌐 Official Website
+All links are synced automatically, so you only need to update `index.html` once to deploy changes to all platforms.
+
+- ✅ **Primary (Recommended for China)**：[ace6perf.netlify.app](https://ace6perf.netlify.app)
+- 📌 **Alternative 1**：[mine-ace6-perf.vercel.app](https://mine-ace6-perf.vercel.app)
+- 📌 **Alternative 2**：[mineaceex.github.io/mine_ace6_perf](https://mineaceex.github.io/mine_ace6_perf/)
+
 ### 📥 Download Options
 - [GitHub Release](https://github.com/MineACEx/mine_ace6_perf/releases)
 - [Domestic Mirror Download](http://www.cccimg.com/down.php/bd84fbfc7f2e64646e28cf3625622a1a.zip)
