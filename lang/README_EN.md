@@ -21,7 +21,7 @@ This is a performance and experience optimization module made exclusively for th
 - **Low Latency Mode**
   Optimizes touch response and fling inertia for more fluid daily operations and smoother animations.
 
-## 🌐 Official Website
+### 🌐 Official Website
 All links are synced automatically, so you only need to update `index.html` once to deploy changes to all platforms.
 
 - ✅ **Primary (Recommended for China)**：[ace6perf.netlify.app](https://ace6perf.netlify.app)
