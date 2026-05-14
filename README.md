@@ -21,6 +21,14 @@
 - **低延迟模式**
   触控响应与惯性滑动优化，日常操作更丝滑，动画过渡更跟手。
 
+### 🌐 官方网站
+| 访问地址 | 推荐指数 | 备注 |
+|----------|----------|------|
+| [ace6perf.netlify.app](https://ace6perf.netlify.app) | ⭐⭐⭐⭐⭐ | 国内秒开，首选入口 |
+| [mine-ace6-perf.vercel.app](https://mine-ace6-perf.vercel.app) | ⭐⭐⭐⭐ | 网络环境良好时使用 |
+| [mineaceex.github.io/mine_ace6_perf](https://mineaceex.github.io/mine_ace6_perf/) | ⭐⭐⭐ | 兜底备用地址 |
+
+
 ### 📥 下载方式
 - [GitHub Release](https://github.com/MineACEx/mine_ace6_perf/releases)
 - [国内直连下载](http://www.cccimg.com/down.php/bd84fbfc7f2e64646e28cf3625622a1a.zip)
