@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineAce Perf - 一加 Ace 6 性能优化模块</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+        /* 动态粒子背景 */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+        .lang-btn {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 0.5rem;
+        }
+        .lang-btn.active {
+            background: #00d4ff;
+            color: #1a1a2e;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: #aaa;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        .section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        .section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #00d4ff;
+        }
+        .feature-item, .step-item {
+            margin: 0.8rem 0;
+            line-height: 1.6;
+        }
+        .download-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-width: 160px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .btn-github {
+            background: #24292f;
+            color: #fff;
+        }
+        .btn-github:hover {
+            background: #30363d;
+            transform: translateY(-2px);
+        }
+        .btn-cn {
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            color: #fff;
+        }
+        .btn-cn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        .footer {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 粒子背景容器 -->
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <!-- 语言切换按钮 -->
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
+            <button class="lang-btn" onclick="switchLang('en')">English</button>
+        </div>
+
+        <h1 class="logo">MineAce Perf</h1>
+
+        <!-- 中文内容 -->
+        <div id="zh-content" class="lang-content active">
+            <p class="subtitle">一加 Ace 6 性能优化模块 | 全局流畅 · 触控增强 · 高刷解锁</p>
+
+            <div class="section">
+                <h2>✨ 核心功能</h2>
+                <div class="feature-item">🔓 <strong>180Hz 屏幕解锁</strong>：解除官方165Hz限制，支持180Hz高刷；不刷入则自动锁定165Hz</div>
+                <div class="feature-item">🎯 <strong>全局330Hz触控采样</strong>：日常/游戏全场景触控拉满，降低延迟、提升跟手度</div>
+                <div class="feature-item">📦 <strong>后台保活增强</strong>：系统缓存进程上限提升至64，锁定常驻后台25个应用</div>
+                <div class="feature-item">🚀 <strong>渲染与流畅优化</strong>：强制GPU合成、硬件加速，拉满滚动缓存，关闭冗余日志IO</div>
+                <div class="feature-item">⚙️ <strong>安全安装脚本</strong>：带MD5校验、DTBO自动备份、音量键选择刷入模式</div>
+            </div>
+
+            <div class="section">
+                <h2>📋 安装步骤</h2>
+                <div class="step-item">1. 确保你的一加 Ace 6 已解锁 Bootloader 并刷入 Magisk</div>
+                <div class="step-item">2. 下载模块压缩包，在 Magisk 中安装</div>
+                <div class="step-item">3. 安装时按提示选择刷入模式：<br>音量上键=刷入DTBO解锁180Hz / 音量下键=跳过保持165Hz</div>
+                <div class="step-item">4. 重启手机，模块自动生效</div>
+                <div class="step-item">5. 可选：安装根目录下的 `sxl.apk` 自定义刷新率</div>
+            </div>
+        </div>
+
+        <!-- 英文内容 -->
+        <div id="en-content" class="lang-content">
+            <p class="subtitle">OnePlus Ace 6 Performance Tuning Module | Smooth UI · Enhanced Touch · 180Hz Unlock</p>
+
+            <div class="section">
+                <h2>✨ Core Features</h2>
+                <div class="feature-item">🔓 <strong>180Hz Display Unlock</strong>: Removes the official 165Hz limit to enable 180Hz high refresh rate. Automatically locks to 165Hz if skipped.</div>
+                <div class="feature-item">🎯 <strong>Global 330Hz Touch Sampling</strong>: Boosts touch sampling rate to 330Hz in all scenarios, reducing latency and improving responsiveness.</div>
+                <div class="feature-item">📦 <strong>Background Process Enhancement</strong>: Raises the system cached process limit to 64 and locks 25 apps in memory.</div>
+                <div class="feature-item">🚀 <strong>Rendering & Smoothness Optimization</strong>: Forces GPU composition and hardware acceleration, maximizes scrolling cache, and disables redundant log I/O.</div>
+                <div class="feature-item">⚙️ <strong>Secure Installation Script</strong>: Includes MD5 checksum verification, automatic DTBO backup, and volume-key-controlled flash mode selection.</div>
+            </div>
+
+            <div class="section">
+                <h2>📋 Installation Guide</h2>
+                <div class="step-item">1. Ensure your OnePlus Ace 6 has an unlocked bootloader and Magisk installed.</div>
+                <div class="step-item">2. Download the module zip file and install it via Magisk.</div>
+                <div class="step-item">3. During installation, choose flash mode: <br>Volume Up = Flash DTBO to unlock 180Hz / Volume Down = Skip and keep 165Hz</div>
+                <div class="step-item">4. Reboot your device. The module will take effect automatically.</div>
+                <div class="step-item">5. Optional: Install `sxl.apk` in the root directory to customize the screen refresh rate.</div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <a href="https://github.com/MineACEx/mine_ace6_perf/releases" class="btn btn-github" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+            </a>
+            <a href="http://www.cccimg.com/down.php/bd84fbfc7f2e64646e28cf3625622a1a.zip" class="btn btn-cn" target="_blank">
+                📥 国内直连下载
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>MIT License | Made by MineACEx</p>
+        </div>
+    </div>
+
+    <!-- 粒子背景JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // 粒子背景配置
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#00d4ff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#7c3aed", opacity: 0.2, width: 1 },
+                move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 0.5 } },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+
+        // 语言切换
+        function switchLang(lang) {
+            // 切换按钮状态
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // 切换内容
+            document.querySelectorAll('.lang-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`${lang}-content`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
