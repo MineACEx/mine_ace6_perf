@@ -25,7 +25,7 @@
 | 访问地址 | 推荐指数 | 备注 |
 |----------|----------|------|
 | [Netlify.app](https://ace6perf.netlify.app) | ⭐⭐⭐⭐⭐ | 国内秒开，首选入口 |
-| [Github.com](https://mine-ace6-perf.vercel.app) | ⭐⭐⭐⭐ | 网络环境良好时使用 |
+| [Github.com](https://mineacex.github.io/mine_ace6_perf/) | ⭐⭐⭐⭐ | 网络环境良好时使用 |
 | [Vercel.app](https://mine-ace6-perf.vercel.app) | ⭐⭐⭐ | 兜底备用地址 |
 
 
